@@ -1,7 +1,20 @@
-const googleServiceAccount = require('./google-service-account.json')
+require('dotenv/config')
+
+const developCredential = require('./develop-credential.json')
+const stagingCredentials = require('./staging-credential.json')
+const productionCredentials = require('./production-credential.json')
+
 const jwt = require('jsonwebtoken')
 
+const credentials = {
+  develop: developCredential,
+  staging: stagingCredentials,
+  production: productionCredentials,
+}
+
 function main() {
+  var googleServiceAccount = credentials[process.env.NODE_ENV]
+
   var token = jwt.sign(
     { 
       iss: googleServiceAccount.client_email,

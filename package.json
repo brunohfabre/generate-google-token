@@ -4,12 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "node ./generate-token.js"
+    "generate:develop": "NODE_ENV=develop node ./generate-token.js",
+    "generate:staging": "NODE_ENV=staging node ./generate-token.js",
+    "generate:production": "NODE_ENV=production node ./generate-token.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.4.5",
     "jsonwebtoken": "^9.0.0"
   }
 }
