@@ -1,4 +1,4 @@
 node_modules
 google-service-account.json
 
-*credential.json
+*.json

@@ -1,8 +1,8 @@
 require('dotenv/config')
 
-const developCredential = require('./develop-credential.json')
-const stagingCredentials = require('./staging-credential.json')
-const productionCredentials = require('./production-credential.json')
+const developCredential = require('./atm-toop-develop-ec4150a5a6c4.json')
+const stagingCredentials = require('./atm-toop-staging-9a6361d465b7.json')
+const productionCredentials = require('./atm-toop-production-2bff34a59bbf.json')
 
 const jwt = require('jsonwebtoken')
 
