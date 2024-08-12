@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "generate:develop": "NODE_ENV=develop node ./generate-token.js",
-    "generate:staging": "NODE_ENV=staging node ./generate-token.js",
-    "generate:production": "NODE_ENV=production node ./generate-token.js"
+    "generate:develop": "cross-env NODE_ENV=develop node ./generate-token.js",
+    "generate:staging": "cross-env NODE_ENV=staging node ./generate-token.js",
+    "generate:production": "cross-env NODE_ENV=production node ./generate-token.js"
   },
   "keywords": [],
   "author": "",
@@ -14,5 +14,8 @@
   "dependencies": {
     "dotenv": "^16.4.5",
     "jsonwebtoken": "^9.0.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
   }
 }
